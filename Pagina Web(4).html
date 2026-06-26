@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>DMY Estructura & Proyecto</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+background:#ffffff;
+color:#111;
+}
+
+header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+padding:25px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(255,255,255,.95);
+backdrop-filter:blur(10px);
+z-index:1000;
+}
+
+.logo{
+font-size:30px;
+font-weight:800;
+letter-spacing:2px;
+}
+
+.logo span{
+color:#ff7a00;
+}
+
+nav{
+display:flex;
+gap:30px;
+}
+
+nav a{
+text-decoration:none;
+color:#111;
+font-weight:500;
+}
+
+.hero{
+height:100vh;
+background:url('https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&fit=crop&w=1600&q=80');
+background-size:cover;
+background-position:center;
+position:relative;
+display:flex;
+align-items:center;
+padding:0 8%;
+}
+
+.hero::before{
+content:'';
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,.45);
+}
+
+.hero-content{
+position:relative;
+color:white;
+max-width:700px;
+}
+
+.hero-content h1{
+font-size:80px;
+line-height:1;
+margin-bottom:20px;
+}
+
+.hero-content p{
+font-size:20px;
+margin-bottom:35px;
+}
+
+.btn{
+display:inline-block;
+padding:18px 35px;
+background:#ff7a00;
+color:white;
+text-decoration:none;
+border-radius:40px;
+font-weight:600;
+}
+
+section{
+padding:120px 8%;
+}
+
+.section-title{
+font-size:55px;
+margin-bottom:25px;
+}
+
+.section-title span{
+color:#ff7a00;
+}
+
+.about{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:60px;
+align-items:center;
+}
+
+.about img{
+width:100%;
+border-radius:25px;
+}
+
+.about-text{
+line-height:1.9;
+font-size:18px;
+color:#555;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+DMY <span>STRUCTURE</span>
+</div>
+
+<nav>
+<a href="#inicio">Inicio</a>
+<a href="#nosotros">Nosotros</a>
+<a href="#servicios">Servicios</a>
+<a href="#proyectos">Proyectos</a>
+<a href="#contacto">Contacto</a>
+</nav>
+
+</header>
+
+<section class="hero" id="inicio">
+
+<div class="hero-content">
+
+<h1>
+Construimos
+el futuro
+</h1>
+
+<p>
+Diseño estructural, construcción y proyectos
+de alta calidad para transformar ideas en realidad.
+</p>
+
+<a href="#contacto" class="btn">
+Solicitar Cotización
+</a>
+
+</div>
+
+</section>
+
+<section id="nosotros">
+
+<h2 class="section-title">
+Sobre <span>Nosotros</span>
+</h2>
+
+<div class="about">
+
+<div>
+
+<p class="about-text">
+
+DMY Estructura & Proyecto es una empresa especializada
+en diseño estructural, construcción y consultoría técnica.
+
+Nos enfocamos en desarrollar proyectos seguros,
+modernos y eficientes, combinando innovación,
+experiencia y calidad en cada obra.
+
+</p>
+
+</div>
+
+<div>
+
+<img src="https://images.unsplash.com/photo-1503387762-592deb58ef4?auto=format&fit=crop&w=1200&q=80">
+
+</div>
+
+</div>
+
+</section>
+<section id="servicios">
+
+<h2 class="section-title">
+Nuestros <span>Servicios</span>
+</h2>
+
+<div class="services">
+
+<div class="service">
+<h3>Diseño Estructural</h3>
+<p>
+Desarrollamos planos y cálculos estructurales
+seguros y eficientes para todo tipo de proyectos.
+</p>
+</div>
+
+<div class="service">
+<h3>Construcción</h3>
+<p>
+Ejecución de obras residenciales,
+comerciales e industriales.
+</p>
+</div>
+
+<div class="service">
+<h3>Remodelaciones</h3>
+<p>
+Transformamos espacios con diseños modernos
+y funcionales.
+</p>
+</div>
+
+<div class="service">
+<h3>Consultoría Técnica</h3>
+<p>
+Asesoramiento profesional para la toma
+de decisiones constructivas.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<style>
+
+.services{
+display:grid;
+grid-template-columns:
+repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+}
+
+.service{
+background:#f7f7f7;
+padding:35px;
+border-radius:20px;
+transition:.4s;
+}
+
+.service:hover{
+transform:translateY(-10px);
+box-shadow:0 15px 35px rgba(0,0,0,.15);
+}
+
+.service h3{
+color:#ff7a00;
+margin-bottom:15px;
+}
+
+</style>
+<section id="proyectos">
+
+<h2 class="section-title">
+Nuestros <span>Proyectos</span>
+</h2>
+
+<div class="projects">
+
+<div class="project">
+<img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab">
+<h3>Edificio Corporativo</h3>
+</div>
+
+<div class="project">
+<img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750">
+<h3>Residencia Moderna</h3>
+</div>
+
+<div class="project">
+<img src="https://images.unsplash.com/photo-1460317442991-0ec209397118">
+<h3>Proyecto Comercial</h3>
+</div>
+
+</div>
+
+<div class="stats-section">
+
+<div>
+<h2>150+</h2>
+<p>Proyectos</p>
+</div>
+
+<div>
+<h2>98%</h2>
+<p>Clientes Satisfechos</p>
+</div>
+
+<div>
+<h2>10+</h2>
+<p>Años de Experiencia</p>
+</div>
+
+</div>
+
+</section>
+
+<style>
+
+.projects{
+display:grid;
+grid-template-columns:
+repeat(auto-fit,minmax(320px,1fr));
+gap:25px;
+margin-bottom:80px;
+}
+
+.project img{
+width:100%;
+height:280px;
+object-fit:cover;
+border-radius:20px;
+}
+
+.project h3{
+margin-top:15px;
+}
+
+.stats-section{
+background:#111;
+color:white;
+padding:60px;
+border-radius:25px;
+display:grid;
+grid-template-columns:
+repeat(auto-fit,minmax(200px,1fr));
+text-align:center;
+gap:30px;
+}
+
+.stats-section h2{
+font-size:55px;
+color:#ff7a00;
+}
+
+</style>
+</body>
+<section id="contacto">
+
+<h2 class="section-title">
+Solicita tu <span>Cotización</span>
+</h2>
+
+<form
+action="https://formsubmit.co/dmy.estructurayproyecto@gmail.com"
+method="POST">
+
+<input
+type="text"
+name="Nombre"
+placeholder="Nombre Completo"
+required>
+
+<input
+type="email"
+name="Correo"
+placeholder="Correo Electrónico"
+required>
+
+<input
+type="tel"
+name="Telefono"
+placeholder="Teléfono"
+required>
+
+<textarea
+name="Proyecto"
+rows="6"
+placeholder="Describe tu proyecto"
+required></textarea>
+
+<input
+type="hidden"
+name="_subject"
+value="Nueva Cotización DMY">
+
+<button type="submit">
+Enviar Solicitud
+</button>
+
+</form>
+
+</section>
+
+<footer>
+
+<h2>DMY Estructura & Proyecto</h2>
+
+<p>
+Construimos calidad, diseñamos futuro.
+</p>
+
+<br>
+
+<p>
+📧 dmy.estructurayproyecto@gmail.com
+</p>
+
+<p>
+📞 +57 300 123 4567
+</p>
+
+</footer>
+
+<style>
+
+form{
+max-width:700px;
+margin:auto;
+}
+
+input,
+textarea{
+width:100%;
+padding:18px;
+margin:12px 0;
+border:1px solid #ddd;
+border-radius:12px;
+}
+
+button{
+width:100%;
+padding:18px;
+background:#ff7a00;
+border:none;
+color:white;
+font-size:18px;
+border-radius:12px;
+cursor:pointer;
+}
+
+footer{
+background:#111;
+color:white;
+text-align:center;
+padding:70px 20px;
+margin-top:100px;
+}
+
+</style>
